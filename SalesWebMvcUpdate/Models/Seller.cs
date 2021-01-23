@@ -18,6 +18,15 @@ namespace SalesWebMvcUpdate.Models
         {
         }
 
+        public Seller(string name, string email, DateTime birthdate, double baseSalary, Department department)//o seed precisa usar ctor sem Id, o EF ou BD vai colocar automaticamente
+        {
+            Name = name;
+            Email = email;
+            Birthdate = birthdate;
+            BaseSalary = baseSalary;
+            Department = department;
+        }
+
         public Seller(int id, string name, string email, DateTime birthdate, double baseSalary, Department department)
         {
             Id = id;

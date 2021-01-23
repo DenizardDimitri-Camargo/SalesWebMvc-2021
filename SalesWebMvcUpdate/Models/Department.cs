@@ -13,7 +13,12 @@ namespace SalesWebMvcUpdate.Models
         public Department()
         {
         }
-        
+
+        public Department(string name)//o seed precisa usar ctor sem Id, o EF ou BD vai colocar automaticamente
+        {
+            Name = name;
+        }
+
         public Department(int id, string name)
         {
             Id = id;

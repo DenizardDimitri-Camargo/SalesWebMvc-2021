@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvcUpdate.Models;
 
-namespace SalesWebMvcUpdate.Data
+namespace SalesWebMvcUpdate.Models
 {
     public class SalesWebMvcUpdateContext : DbContext
     {

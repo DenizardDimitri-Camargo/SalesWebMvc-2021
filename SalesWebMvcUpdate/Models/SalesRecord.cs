@@ -15,6 +15,14 @@ namespace SalesWebMvcUpdate.Models
         {
         }
 
+        public SalesRecord(DateTime date, double amount, SaleStatus status, Seller seller)//o seed precisa usar ctor sem Id, o EF ou BD vai colocar automaticamente
+        {
+            Date = date;
+            Amount = amount;
+            Status = status;
+            Seller = seller;
+        }
+
         public SalesRecord(int id, DateTime date, double amount, SaleStatus status, Seller seller)
         {
             Id = id;

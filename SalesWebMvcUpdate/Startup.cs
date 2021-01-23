@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvcUpdate.Data;
+using SalesWebMvcUpdate.Models;
 
 namespace SalesWebMvcUpdate
 {
@@ -24,7 +25,7 @@ namespace SalesWebMvcUpdate
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services) //DependenCy Injection system
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -39,14 +40,17 @@ namespace SalesWebMvcUpdate
             services.AddDbContext<SalesWebMvcUpdateContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("SalesWebMvcUpdateContext"), builder =>
                         builder.MigrationsAssembly("SalesWebMvcUpdate")));
+
+            services.AddScoped<SeedingService>(); //registra o serviço (seedingService) no sistema DI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, SeedingService seedingService)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                seedingService.Seed(); //A instância é criada quando existe um Seeding Service no DI
             }
             else
             {
