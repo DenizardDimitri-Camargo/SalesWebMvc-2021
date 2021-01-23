@@ -33,4 +33,11 @@ C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\obj\Debug\netc
 C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\obj\Debug\netcoreapp2.1\SalesWebMvcUpdate.dll
 C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\obj\Debug\netcoreapp2.1\SalesWebMvcUpdate.pdb
 C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\obj\Debug\netcoreapp2.1\SalesWebMvcUpdate.csproj.CopyComplete
+C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\obj\Debug\netcoreapp2.1\SalesWebMvcUpdate.csprojAssemblyReference.cache
+C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\bin\Debug\netcoreapp2.1\Properties\serviceDependencies.json
+C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\bin\Debug\netcoreapp2.1\Properties\serviceDependencies.local.json
+C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Create.cshtml.g.cs
+C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Delete.cshtml.g.cs
+C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Details.cshtml.g.cs
+C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Edit.cshtml.g.cs
 C:\TCC\ESTUDO\C# Udemy - Nelio\SalesWebMvc 2021\SalesWebMvcUpdate\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Index.cshtml.g.cs
