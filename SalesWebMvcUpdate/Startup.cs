@@ -37,7 +37,8 @@ namespace SalesWebMvcUpdate
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<SalesWebMvcUpdateContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("SalesWebMvcUpdateContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("SalesWebMvcUpdateContext"), builder =>
+                        builder.MigrationsAssembly("SalesWebMvcUpdate")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
