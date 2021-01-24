@@ -11,7 +11,8 @@ namespace SalesWebMvcUpdate.Models
         public string Email { get; set; }
         public DateTime Birthdate { get; set; }
         public double BaseSalary { get; set; }
-        public Department Department { get; set; } //FK
+        public Department Department { get; set; } //criou a FK no BD quando fiz migration, mas como null
+        public int DepartmentId { get; set; } //avisa ao EF que este ID vai ter que existir(int not null)
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()
