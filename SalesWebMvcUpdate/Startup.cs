@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvcUpdate.Data;
 using SalesWebMvcUpdate.Models;
+using SalesWebMvcUpdate.Services;
 
 namespace SalesWebMvcUpdate
 {
@@ -42,6 +43,7 @@ namespace SalesWebMvcUpdate
                         builder.MigrationsAssembly("SalesWebMvcUpdate")));
 
             services.AddScoped<SeedingService>(); //registra o serviço (seedingService) no sistema DI
+            services.AddScoped<SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
