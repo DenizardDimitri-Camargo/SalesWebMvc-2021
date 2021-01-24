@@ -1,4 +1,5 @@
-﻿using SalesWebMvcUpdate.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SalesWebMvcUpdate.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,11 +29,7 @@ namespace SalesWebMvcUpdate.Services
 
         public Seller FindById(int id)
         {
-            var seller = _context.Seller.FirstOrDefault(x => x.Id == id);
-            if (seller != null)
-                return seller;
-
-            return null;
+            return _context.Seller.Include(obj => obj.Department).FirstOrDefault(obj => obj.Id == id); //Include faz o join da tabela Deparment
         }
 
         public void Remove(int id)
