@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace SalesWebMvcUpdate.Models
@@ -8,8 +9,17 @@ namespace SalesWebMvcUpdate.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+
+        [Display(Name = "Birth Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Birthdate { get; set; }
+        
+        [Display(Name = "Base Salary")]
+        [DisplayFormat(DataFormatString = "{0:F2}")] //o 0 indica o valr do atributo, e F2 indica que ele vai ter duas casas decimais
         public double BaseSalary { get; set; }
         public Department Department { get; set; } //criou a FK no BD quando fiz migration, mas como null
         public int DepartmentId { get; set; } //avisa ao EF que este ID vai ter que existir(int not null)
