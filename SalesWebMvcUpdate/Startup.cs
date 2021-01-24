@@ -44,6 +44,7 @@ namespace SalesWebMvcUpdate
 
             services.AddScoped<SeedingService>(); //registra o serviço (seedingService) no sistema DI
             services.AddScoped<SellerService>();
+            services.AddScoped<DepartmentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
