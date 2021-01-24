@@ -9,24 +9,30 @@
 <h4>Seller</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4"> <!--O Bootstrao divide a tela em 12 partes-->
-        <form asp-action="Edit"><!--Edit do método post-->
-            <input type="hidden" asp-for="Seller.Id"/> <!--vai enviar o Id para o controller CREIO-->
+    <div class="col-md-4">
+        <!--O Bootstrao divide a tela em 12 partes-->
+        <form asp-action="Edit">
+            <!--Edit do método post-->
+            <input type="hidden" asp-for="Seller.Id" /> <!--vai enviar o Id para o controller CREIO-->
             <div class="form-group">
                 <label asp-for="Seller.Name" class="control-label"></label>
                 <input asp-for="Seller.Name" class="form-control" />
+                <span asp-validation-for="Seller.Name" class="text-danger"></span> <!--validação individual-->
             </div>
             <div class="form-group">
                 <label asp-for="Seller.Email" class="control-label"></label>
                 <input asp-for="Seller.Email" class="form-control" />
+                <span asp-validation-for="Seller.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Seller.Birthdate" class="control-label"></label>
                 <input asp-for="Seller.Birthdate" class="form-control" />
+                <span asp-validation-for="Seller.Birthdate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Seller.BaseSalary" class="control-label"></label>
                 <input asp-for="Seller.BaseSalary" class="form-control" />
+                <span asp-validation-for="Seller.BaseSalary" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Seller.DepartmentId" class="control-label"></label>
@@ -39,3 +45,8 @@
         </form>
     </div>
 </div>
+
+<!--Faz que a validação(asp-validation-summary) funcione a nivel de JS(lado do cliente)-->
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
