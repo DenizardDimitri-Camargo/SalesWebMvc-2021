@@ -43,7 +43,7 @@ namespace SalesWebMvcUpdate.Services
             }
             catch(DbUpdateException e)
             {
-                throw new IntegrityException(e.Message);
+                throw new IntegrityException(e.Message); //poderia colocar minha própria mensagem ("mensagem de erro")
             }
         }
 
